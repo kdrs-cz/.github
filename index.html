@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kdrs = coders</title>
+    <meta name="description" content="We are coders">
+    <meta name="author" content="kdrs">
+    <meta property="og:title" content="kdrs = coders">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content=https://kdrs.cz/">
+    <meta property="og:description" content="We are coders">
+    <meta property="og:image" content="https://kdrs.cz/image.png">
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            color: white;
+            background: black;
+        }
+
+        #kdrs {
+            position: relative;
+            float: left;
+            font-size: 64px;
+            font-family: "Lucida Console", Monaco, monospace;
+            background-color: black;
+        }
+
+        #kdrs > .indicator {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-color: black;
+            border-left: 1px solid transparent;
+            animation: Fwrite 4s steps(8, start), Wbar 0.75s step-end infinite;
+        }
+
+        #kdrs > p:hover {
+            animation-play-state: paused;
+        }
+
+        #kdrs .green {
+            color: #00FF94;
+        }
+
+        @keyframes Fwrite {
+            0% {
+                width: 100%;
+            }
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes Wbar {
+            0% {
+                border-left-color: transparent;
+            }
+            50% {
+                border-left-color: white;
+            }
+            100% {
+                border-left-color: transparent;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="kdrs">
+        <span class="green">&lt;</span>kdrs<span class="green"> /&gt;</span><span class="indicator"></span>
+    </div>
+</body>
+</html>
